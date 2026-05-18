@@ -1,6 +1,10 @@
 # Setup Linux Environment on Windows and MacOS
 
 There are multiple ways to setup a Linux environment on a Windows or Mac machines such as `cloud vm`, `wsl2`, `virtualbox`, `Hyperkit` e.t.c.,. However what I would recommend is using a container as a Linux environment.
+```bash
+wsl --install
+``` 
+restart the system.
 
 Just install Docker desktop, run the below command and create linux container of any distribution without worrying about the cost and connectivity issues.
 
