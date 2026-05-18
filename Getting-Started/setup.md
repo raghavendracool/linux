@@ -10,21 +10,18 @@ Just install Docker desktop, run the below command and create linux container of
 
 - Then run the below command in `poweshell` updating your `username`.
 
-```bash
-docker run -dit `
-  --name ubuntu-container `
-  --hostname ubuntu-dev `
-  --restart unless-stopped `
-  --cpus="2" `
-  --memory="4g" `
-  --mount type=bind,source="C:/Users/RaghavendraRao/Downloads/ubuntu-container",target=/data `
-  -v /var/run/docker.sock:/var/run/docker.sock `
-  -p 2222:22 `
-  -p 8080:80 `
-  --env TZ=Asia/Kolkata `
-  --env LANG=en_US.UTF-8 `
-  ubuntu:latest /bin/bash              
-```
+docker run -dit ^
+  --name ubuntu-container ^
+  --hostname ubuntu-dev ^
+  --restart unless-stopped ^
+  --cpus="2" ^
+  --memory="4g" ^
+  --mount type=bind,source="C:\Users\RaghavendraRao\Downloads\ubuntu-container",target=/data ^
+  -p 2222:22 ^
+  -p 8080:80 ^
+  --env TZ=Asia/Kolkata ^
+  --env LANG=en_US.UTF-8 ^
+  ubuntu:latest /bin/bash
 
 ### Docker Command to Run Ubuntu Linux Container in mac or linux host (Persistent & Long-Term) 
 
