@@ -10,6 +10,7 @@ Just install Docker desktop, run the below command and create linux container of
 
 - Then run the below command in `poweshell` updating your `username`.
 
+```bash
 docker run -dit ^
   --name ubuntu-container ^
   --hostname ubuntu-dev ^
@@ -22,6 +23,8 @@ docker run -dit ^
   --env TZ=Asia/Kolkata ^
   --env LANG=en_US.UTF-8 ^
   ubuntu:latest /bin/bash
+
+```  
 
 ### Docker Command to Run Ubuntu Linux Container in mac or linux host (Persistent & Long-Term) 
 
