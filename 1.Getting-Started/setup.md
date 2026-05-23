@@ -29,6 +29,12 @@ docker run -dit ^
   ubuntu:latest /bin/bash
 
 ```  
+###Docker command to entry into container
+
+```bash
+docker exec -it continerID /bin/bash
+
+```
 
 ### Docker Command to Run Ubuntu Linux Container in mac or linux host (Persistent & Long-Term) 
 
