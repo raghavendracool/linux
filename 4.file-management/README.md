@@ -24,21 +24,38 @@
 19. **`echo 'Hello' > file.txt`** – Writes text to a file, overwriting existing content.
 20. **`echo 'Hello' >> file.txt`** – Appends text to a file without overwriting.
 
-| Command             | Use                                   |
-| ------------------- | ------------------------------------- |
-| `ls`                | List files and folders                |
-| `ls -a`             | Show hidden files also                |
-| `ls -l`             | Show detailed list                    |
-| `ls -lh`            | Detailed list with readable size      |
-| `ls -lt`            | Latest modified file first            |
-| `ls -ltr`           | Oldest first, latest at bottom        |
-| `ls -lrth`          | Oldest first, readable size, detailed |
-| `ls -larth`         | Same as above + hidden files          |
-| `ls -R`             | Show files inside subdirectories also |
-| `ls -d */`          | Show only directories                 |
-| `ls *.log`          | Show only `.log` files                |
-| `ls -lhS`           | Sort by file size, biggest first      |
-| `ls -lSrh`          | Sort by file size, smallest first     |
-| `ls -i`             | Show inode number                     |
-| `ls -ld foldername` | Show folder details, not inside files |
+# File Management in Linux
 
+### Common `ls` Commands for Daily Use
+
+1. **`ls`** – Lists files and directories in the current location.
+2. **`ls -a`** – Shows all files, including hidden files.
+3. **`ls -l`** – Shows files and directories in detailed long-list format.
+4. **`ls -lh`** – Shows detailed list with file sizes in human-readable format like KB, MB, GB.
+5. **`ls -lt`** – Lists files by modified time, latest file first.
+6. **`ls -ltr`** – Lists files by modified time in reverse order, oldest first and latest at bottom.
+7. **`ls -lrth`** – Shows detailed list with human-readable size, oldest first and latest file at bottom.
+8. **`ls -larth`** – Same as `ls -lrth`, but also shows hidden files.
+9. **`ls -R`** – Lists files and directories recursively, including subdirectories.
+10. **`ls -d */`** – Shows only directories in the current location.
+11. **`ls *.log`** – Lists only files ending with `.log`.
+12. **`ls -lhS`** – Lists files by size, biggest file first.
+13. **`ls -lSrh`** – Lists files by size in reverse order, smallest file first.
+14. **`ls -i`** – Shows inode number of files and directories.
+15. **`ls -ld foldername`** – Shows details of a directory itself, not the files inside it.
+
+### Most Used `ls` Commands in Real Time
+
+16. **`ls -lrth /var/log/`** – Checks latest log files, with the newest file at the bottom.
+17. **`ls -larth ~`** – Shows all files, including hidden files, in the home directory.
+18. **`ls -lhS`** – Checks the biggest files in the current directory.
+19. **`ls -d */`** – Shows only directories.
+20. **`ls -ld /var/www/html`** – Checks folder permissions and ownership.
+21. **`ls -lrth *.log`** – Shows all `.log` files with the latest log file at the bottom.
+
+### Easy Notes
+
+- **`ls -lrth`** = Latest file at the bottom.
+- **`ls -larth`** = Latest file at the bottom + hidden files also.
+- **`ls -lhS`** = Biggest file at the top.
+- **`ls -ld foldername`** = Check directory permission.
