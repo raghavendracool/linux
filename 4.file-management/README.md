@@ -24,3 +24,21 @@
 19. **`echo 'Hello' > file.txt`** – Writes text to a file, overwriting existing content.
 20. **`echo 'Hello' >> file.txt`** – Appends text to a file without overwriting.
 
+| Command             | Use                                   |
+| ------------------- | ------------------------------------- |
+| `ls`                | List files and folders                |
+| `ls -a`             | Show hidden files also                |
+| `ls -l`             | Show detailed list                    |
+| `ls -lh`            | Detailed list with readable size      |
+| `ls -lt`            | Latest modified file first            |
+| `ls -ltr`           | Oldest first, latest at bottom        |
+| `ls -lrth`          | Oldest first, readable size, detailed |
+| `ls -larth`         | Same as above + hidden files          |
+| `ls -R`             | Show files inside subdirectories also |
+| `ls -d */`          | Show only directories                 |
+| `ls *.log`          | Show only `.log` files                |
+| `ls -lhS`           | Sort by file size, biggest first      |
+| `ls -lSrh`          | Sort by file size, smallest first     |
+| `ls -i`             | Show inode number                     |
+| `ls -ld foldername` | Show folder details, not inside files |
+
