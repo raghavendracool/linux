@@ -44,6 +44,93 @@ chmod 644 filename  # User (rw-), Group (r--), Others (r--)
 chmod 700 filename  # User (rwx), No access for others
 ```
 
+## Steps: Trainer Creates Script → Student Gets RWX Access
+
+### Step 1 — Login as `trainer`, create the script
+
+```bash
+su - trainer
+# or open trainer's terminal
+
+mkdir -p ~/shared
+vim ~/shared/helloworld.sh
+```
+
+Add content, save and exit:
+
+```bash
+:wq
+```
+
+---
+
+### Step 2 — Set directory permission
+
+Student must be able to enter the directory.
+
+```bash
+chmod o+rx /home/trainer
+chmod o+rx /home/trainer/shared
+```
+
+---
+
+### Step 3 — Set file permissions
+
+Give `rwx` permission to others, so the student can read, write, and execute the script.
+
+```bash
+chmod o+rwx /home/trainer/shared/helloworld.sh
+```
+
+Verify:
+
+```bash
+ls -l /home/trainer/shared/helloworld.sh
+# should show: -rwxr-xrwx or similar with others = rwx
+```
+
+---
+
+### Step 4 — Switch to `student` and test all 3 permissions
+
+```bash
+su - student
+
+# 1. READ
+cat /home/trainer/shared/helloworld.sh
+
+# 2. WRITE
+echo "echo Hello" >> /home/trainer/shared/helloworld.sh
+
+# 3. EXECUTE
+bash /home/trainer/shared/helloworld.sh
+```
+
+---
+
+### Permission Meaning
+
+```text
+r = read
+w = write
+x = execute
+```
+
+```bash
+chmod o+rwx /home/trainer/shared/helloworld.sh
+```
+
+Meaning:
+
+```text
+o = others
++rwx = add read, write, execute permission
+```
+
+So any other user, including `student`, can read, edit, and execute the script.
+
+
 ## Changing Ownership with `chown`
 Modify file owner and group:
 ```bash
